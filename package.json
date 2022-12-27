@@ -1,0 +1,39 @@
+{
+  "name": "server-print",
+  "version": "1.0.0",
+  "description": "test server print from app rn",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "make_win32": "electron-forge make --arch=ia32",
+    "make_win64": "electron-forge make --arch=x64"
+  },
+  "author": "MVS_2.0 VSS_anhnh153",
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^1.8.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "nodemon": "^2.0.13",
+    "pdf-to-printer": "^5.1.1",
+    "portfinder": "^1.0.28"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.61",
+    "@electron-forge/maker-deb": "^6.0.0-beta.61",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.61",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
+    "@electron-forge/maker-zip": "^6.0.0-beta.61",
+    "electron": "^15.3.0"
+  },
+  "build": {
+    "win": {
+      "requestedExecutionLevel": "requireAdministrator"
+    }
+  },
+  "config": {}
+}

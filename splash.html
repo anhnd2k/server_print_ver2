@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<style>
+body {
+    background-color: #ffffff;
+}
+    .loader {
+        border: 5px solid rgba(18, 65, 145, 255);
+        border-radius: 50%;
+        border-top: 5px solid #ffffff;
+        width: 40px;
+        height: 40px;
+        -webkit-animation: spin 1s linear infinite;
+        /* Safari */
+        animation: spin 1s linear infinite;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 70px;
+        bottom: 0;
+        position: fixed;
+    }
+
+    /* Safari */
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<body>
+    <div style="display: flex;">
+        <img style="margin: auto; width: 180px; height: 180px" src="./vt_logo.png"/>
+        <div class="loader"></div>
+    </div>
+</html>

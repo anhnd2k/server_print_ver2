@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Viettel Store Server Printer</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+  </head>
+  <body>
+    <script>
+      async function fetchMovies() {
+        const response = await fetch("http://localhost:6868/get-ip-address");
+        const movies = await response.json();
+        document.getElementById("demo").innerHTML = movies.data;
+      }
+      fetchMovies();
+    </script>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex: 1;
+      "
+    >
+      <img style="margin: auto; width: 200px; height: 200px" src="./vt_logo.png"/>
+      <h1>Nhập địa chỉ IP để in qua máy tính:</h1>
+
+      <h1 id="demo">Loading ip...</h1>
+    </div>
+  </body>
+</html>
